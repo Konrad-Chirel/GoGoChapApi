@@ -167,3 +167,8 @@ Route::middleware('auth:sanctum')->prefix('livreurs')->group(function () {
     Route::get('/{livreur}', [DeliveryPersonController::class, 'show']); // Détail
     Route::delete('/{livreur}', [DeliveryPersonController::class, 'destroy']); // Supprimer
 });
+
+Route::get('/healthz', function () {
+    return response()->json(['status' => 'ok']);
+});
+
