@@ -8,7 +8,7 @@ composer install --no-dev --optimize-autoloader
 echo "🔐 Génération de la clé Laravel..."
 php artisan key:generate --force
 
-echo "📁 Création du lien vers le dossier storage (si nécessaire)..."
+echo "📁 Création du lien vers le dossier storage..."
 php artisan storage:link || true
 
 echo "⚙️ Cache de la config et des routes..."
