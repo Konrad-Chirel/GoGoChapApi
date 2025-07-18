@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: laravel-api-gogochap
+    env: php
+    region: oregon
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "php artisan serve --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://laravel-api-gogochap.onrender.com
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: dpg-d1t3v2juibrs738sbhig-a.oregon-postgres.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: gogochap_db
+      - key: DB_USERNAME
+        value: gogochap_user
+      - key: DB_PASSWORD
+        value: 3xkBe4UqMU7gh6CxoZ12MiLYqCCOmwBT
